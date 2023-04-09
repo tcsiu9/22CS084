@@ -48,10 +48,10 @@ class _RoutePreparingScreenState extends State<RoutePreparingScreen> {
                       Navigator.of(context)
                           .push(MaterialPageRoute(
                               builder: (context) =>
-                                  QrcodeScanner(route_uuid: route_uuid)))
-                          .then((value) =>
-                              BlocProvider.of<TaskStatusBloc>(context).add(
-                                  TaskStatusRefreshed(route_uuid: route_uuid)));
+                                  QrcodeScanner(route_uuid: route_uuid)));
+                          // .then((value) =>
+                          //     BlocProvider.of<TaskStatusBloc>(context).add(
+                          //         TaskStatusRefreshed(route_uuid: route_uuid)));
                     },
                     child: const Icon(
                       Icons.camera_alt_outlined,
@@ -66,6 +66,12 @@ class _RoutePreparingScreenState extends State<RoutePreparingScreen> {
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text('Status Update Error'),
                   backgroundColor: Colors.red,
+                ));
+              }
+              if (state is RouteUpdateSuccess) {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('Status Update Success'),
+                  backgroundColor: Colors.green,
                 ));
               }
             },
@@ -93,8 +99,12 @@ class _RoutePreparingScreenState extends State<RoutePreparingScreen> {
               if (state is RouteNeedRefresh) {
                 BlocProvider.of<RouteBloc>(context)
                     .add(RouteRefreshed(route_uuid: route_uuid));
+                BlocProvider.of<TaskStatusBloc>(context).add(
+                    TaskStatusRefreshed(route_uuid: route_uuid));
               }
-              return const Text('fail');
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
             }),
           )),
     );

@@ -40,7 +40,7 @@ class Company extends Model
     public static function getInpageTitle(int $id = -1)
     {
         $model = static::findRecord($id);
-        if ($model instanceof Company) {
+        if($model instanceof Company){
             return trim($model->company_name);
         }
         return sprintf('%s #%d', self::PAGE_TITLE, $id);

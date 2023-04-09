@@ -19,6 +19,6 @@ class SearchSubmitted extends SearchEvent {
   String toString() => 'SearchSubmitted {$uuid}';
 }
 
-class SearchRefreshed extends SearchEvent {}
+class SearchClear extends SearchEvent {}
 
 class ReturnLogin extends SearchEvent {}

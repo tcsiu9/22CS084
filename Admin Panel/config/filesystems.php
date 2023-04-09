@@ -87,8 +87,8 @@ return [
     */
 
     'links' => [
-        public_path('storage\media') => storage_path('media'),
-        public_path('storage\csv') => storage_path('csv'),
+        public_path(implode(DIRECTORY_SEPARATOR, ['storage','media'])) => storage_path('media'),
+        public_path(implode(DIRECTORY_SEPARATOR, ['storage','csv'])) => storage_path('csv'),
     ],
 
 ];

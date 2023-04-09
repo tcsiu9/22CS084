@@ -45,7 +45,9 @@ class _RouteScreenState extends State<RouteScreen> {
       if (state is TaskStatusFinished) {
         return const RouteFinishScreen();
       }
-      return const Text('Fail');
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
     });
   }
 }

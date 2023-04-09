@@ -28,7 +28,7 @@ class TaskList extends StatelessWidget {
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => RouteScreen(task_uuid: task.uuid, status: task.status,))).then((value) => BlocProvider.of<TaskBloc>(context).add(TaskRefreshed()));
                     },
                     leading: Text((index + 1).toString()),
-                    title: Text(task.id.toString()),
+                    title: Text(task.uuid.toString()),
                     subtitle: Text(task.updated_at),
                   );
                 }

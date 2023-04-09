@@ -54,7 +54,7 @@ class PanelController extends BaseController
 
         try {
             $output = json_decode($output, true);
-            if (is_array($output) && sizeof($output) > 0) {
+            if(is_array($output) && sizeof($output) > 0){
                 return $this->sendResponse($output, 'Route Planning Success!');
             }
             return $this->sendError('Route Planning Fail!', [$output]);

@@ -15,7 +15,7 @@ class WebRequest extends FormRequest
      */
     public function authorize()
     {
-        if(!Auth::check() || !Cookie::has('company')){
+        if (!Auth::check() || !Cookie::has('company')) {
             header('location:'.route('login'));
             abort(301);
         }

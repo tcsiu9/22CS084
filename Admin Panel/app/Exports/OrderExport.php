@@ -8,7 +8,7 @@ use App\Models\Company;
 class OrderExport extends BaseExport
 {
     private int $company_id = -1;
-
+    
     public function __construct(int $company_id = -1)
     {
         $this->company_id = $company_id;

@@ -31,7 +31,7 @@ $actions = [
 			<a class="{{ $config['class'] ?? '' }}" id="{{ 'btn_is_delete_modal_' . $item->id }}" data-bs-toggle="modal" data-bs-target="#is_delete_modal">
                 <i class="align-middle" data-feather="{{ $config['icon'] ?? '' }}"></i>
 			</a>
-            {{ View::make('panel/part/delete', ['id' => $item->id, 'model' => $model]) }}
+            {{ View::make('panel/part/delete', ['id' => $item->id, 'model' => $model, 'uuid' => $item->uuid]) }}
 			@elseif($config['type'] == 'assign')
 			@if(is_null($item->relative_staff))
 			<a class="{{ $config['class'] ?? '' }}" id="{{ 'btn_assign_modal_' . $item->id }}" data-bs-toggle="modal" data-bs-target="#assign_modal" data-bs-value="{{ $item->id }}">

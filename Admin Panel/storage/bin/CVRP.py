@@ -350,7 +350,7 @@ def route_planning(url, num_vehicles, vehicle_payload):
 	depot = DepotInfo(center['#'], center['delivery1'], center['lat'], center['lng'])
 
 	if len(input_data) < 5 :
-		return 'Too few data'
+		return 'Too few orders'
 
 	if int(center['demand']) > (num_vehicles * vehicle_payload):
 		return 'Not enough payload'
@@ -516,13 +516,13 @@ def route_planning(url, num_vehicles, vehicle_payload):
 
 
 def main():
-	# url = sys.argv[1]
-	# num_vehicles = int(sys.argv[2])
-	# vehicle_payload = int(sys.argv[3])
+	url = sys.argv[1]
+	num_vehicles = int(sys.argv[2])
+	vehicle_payload = int(sys.argv[3])
 
-	url = "C:\\xampp\\htdocs\\fyp\\public\\storage\\csv\\abc_2023_03_18_20_43_17.csv"
-	num_vehicles = int(4)
-	vehicle_payload = int(80)
+	# url = "C:\\xampp\\htdocs\\fyp\\public\\storage\\csv\\abc_2023_03_18_20_43_17.csv"
+	# num_vehicles = int(4)
+	# vehicle_payload = int(80)
 
 	output = route_planning(url, num_vehicles, vehicle_payload)
 	# print(output)

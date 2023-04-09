@@ -33,6 +33,8 @@ class RouteUpdateError extends RouteState {
   String toString() => 'RouteUpdateError {$error}';
 }
 
+class RouteUpdateSuccess extends RouteState {}
+
 class RouteLoaded extends RouteState {
   final Map<String, OrderRoute> routes;
   final Map<String, Map<String, OrderStatus>> status;

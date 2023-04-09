@@ -28,6 +28,7 @@ class _SearchScreenState extends State<SearchScreen> {
             content: Text('Wrong Order Id'),
             backgroundColor: Colors.red,
           ));
+          BlocProvider.of<SearchBloc>(context).add(SearchClear());
         }
       },
       child: BlocBuilder<SearchBloc, SearchState>(

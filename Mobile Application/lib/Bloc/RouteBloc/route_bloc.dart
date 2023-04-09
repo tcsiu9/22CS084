@@ -34,8 +34,7 @@ class RouteBloc extends Bloc<RouteEvent, RouteState> {
     on<RouteStatusUpdate>((event, emit) async {
       try{
         await userRepositories.updateOrderStatus(event.scanData);
-        emit(RouteNeedRefresh());
-
+        emit(RouteUpdateSuccess());
       }catch (error) {
         emit(RouteUpdateError(error: error.toString()));
       }
