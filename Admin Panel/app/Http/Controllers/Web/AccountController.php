@@ -39,7 +39,7 @@ class AccountController extends BaseController
                 'company_name'          => 'required|string|max:255|unique:company',
                 'office_address'        => 'required|string|max:255',
                 'office_email'          => 'required|string|email|max:255|unique:company',
-                'office_phone'          => 'required|string|max:20',
+                'office_phone'          => 'required|digits:8',
                 'warehouse_address1'    => 'required|string|max:255',
                 'warehouse_address2'    => 'string|max:255|nullable',
                 'lat'                   => 'required|numeric|max:255',
@@ -50,7 +50,7 @@ class AccountController extends BaseController
                 'password'              => 'required|confirmed|Regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)[A-Za-z\d!@#$%^\&*()_+-={}\[\]:\";\'<>,\.\\?~`]{8,}$/',
                 'sex'                   => 'required|string',
                 'email'                 => 'required|string|email|max:255|unique:account',
-                'phone'                 => 'required|string|max:20',
+                'phone'                 => 'required|digits:8',
                 'first_name'            => 'string|max:255',
                 'last_name'             => 'string|max:255',
             ]);

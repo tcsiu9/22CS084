@@ -34,7 +34,7 @@ $title = 'Register Page';
 							</div>
 							<div class="col-4">
 								<label for="r_c_email" class="form-label">{{ __('Office Email:') }}{!! Utility::required() !!}</label>
-								<input type="email" class="form-control" name="office_email" id="r_c_email" autocomplete="new-password" value="{{ old('office_email') ?? '' }}" placeholder="Enter a Office Email" />
+								<input type="text" class="form-control" name="office_email" id="r_c_email" autocomplete="new-password" value="{{ old('office_email') ?? '' }}" placeholder="Enter a Office Email" />
 							</div>
 							<div class="col-4">
 								<label for="r_c_office_phone" class="form-label">{{ __('Office Phone Number:') }}{!! Utility::required() !!}</label>
@@ -73,11 +73,11 @@ $title = 'Register Page';
 						<div class="row mb-3">
 							<div class="col-12 col-md-4">
 								<label for="r_a_first_name" class="form-label">{{ __('First Name:') }}{!! Utility::required() !!}</label>
-								<input type="text" required class="form-control" name="first_name" id="r_a_first_name" autocomplete="new-password" value="{{ old('first_name') ?? '' }}" placeholder="Enter Your First Name" />
+								<input type="text" class="form-control" name="first_name" id="r_a_first_name" autocomplete="new-password" value="{{ old('first_name') ?? '' }}" placeholder="Enter Your First Name" />
 							</div>
 							<div class="col-12 col-md-4">
 								<label for="r_a_last_name" class="form-label">{{ __('Last Name:') }}{!! Utility::required() !!}</label>
-								<input type="text" required class="form-control" name="last_name" id="r_a_last_name" autocomplete="new-password" value="{{ old('last_name') ?? '' }}" placeholder="Enter Your Last Name" />
+								<input type="text" class="form-control" name="last_name" id="r_a_last_name" autocomplete="new-password" value="{{ old('last_name') ?? '' }}" placeholder="Enter Your Last Name" />
 							</div>
 							<div class="col-12 col-md-4">
 								<label for="sex" class="form-label">{{ __('Gender:') }}{!! Utility::required() !!}</label>
@@ -92,28 +92,28 @@ $title = 'Register Page';
 						<div class="row mb-3">
 							<div class="col-12 col-md-4">
 								<label for="r_a_username" class="form-label">{{ __('Username:') }}{!! Utility::required() !!}</label>
-								<input type="text" required class="form-control" name="username" id="r_a_username" autocomplete="new-password" value="{{ old('username') ?? '' }}" placeholder="Enter a Username" />
+								<input type="text" class="form-control" name="username" id="r_a_username" autocomplete="new-password" value="{{ old('username') ?? '' }}" placeholder="Enter a Username" />
 							</div>
 							<div class="col-12 col-md-4">
 								<label for="r_a_email" class="form-label">{{ __('Email:') }}{!! Utility::required() !!}</label>
-								<input type="email" required class="form-control" name="email" id="r_a_email" autocomplete="new-password" value="{{ old('email') ?? '' }}" placeholder="Enter a Email" />
+								<input type="text" class="form-control" name="email" id="r_a_email" autocomplete="new-password" value="{{ old('email') ?? '' }}" placeholder="Enter a Email" />
 							</div>
 							<div class="col-12 col-md-4">
 								<label for="r_a_phone" class="form-label">{{ __('Phone:') }}{!! Utility::required() !!}</label>
-								<input type="text" required class="form-control" name="phone" id="r_a_phone" autocomplete="new-password" value="{{ old('phone') ?? '' }}" placeholder="Enter a Phone" />
+								<input type="text" class="form-control" name="phone" id="r_a_phone" autocomplete="new-password" value="{{ old('phone') ?? '' }}" placeholder="Enter a Phone" />
 							</div>
 						</div>
 						<div class="row mb-3">
 							<div class="col-12">
 								<label for="r_a_password" class="form-label">{{ __('Password:') }}{!! Utility::required() !!}</label>
-								<input type="password" required class="form-control" name="password" id="r_a_password" placeholder="Enter a Password" pattern="{{ \App\Commons\Constants::PASSWORD_REGEXP }}" />
+								<input type="password" class="form-control" name="password" id="r_a_password" placeholder="Enter a Password" pattern="{{ \App\Commons\Constants::PASSWORD_REGEXP }}" />
 							</div>
 							<h5 class="text-danger mt-1">Password should be at least 8 characters in length and include at least one uppercase letter, one lowercase letter, and one number.</h5>
 						</div>
 						<div class="row mb-3">
 							<div class="col-12">
 								<label for="r_a_password_confirm" class="form-label">{{ __('Password Confirm:') }}{!! Utility::required() !!}</label>
-								<input type="password" required class="form-control" name="password_confirmation" id="r_a_password_confirm" placeholder="Re-enter a Password" pattern="{{ \App\Commons\Constants::PASSWORD_REGEXP }}" />
+								<input type="password" class="form-control" name="password_confirmation" id="r_a_password_confirm" placeholder="Re-enter a Password" pattern="{{ \App\Commons\Constants::PASSWORD_REGEXP }}" />
 							</div>
 						</div>
 						<div class="row">
