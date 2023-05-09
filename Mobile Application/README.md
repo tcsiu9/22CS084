@@ -1,16 +1,14 @@
-# fyp_app
+# Mobile Application
 
-A new Flutter project.
+Staff:
+- Login with a staff account.
+- List all the assigned task.
+- Show the planned route of the task.
+- Show the details of the orders.
+- Order check-in and check-out by scanning QRCode
+- Navgation
 
-## Getting Started
+Customer:
+- Order tracking
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
